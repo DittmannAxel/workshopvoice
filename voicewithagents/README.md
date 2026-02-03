@@ -17,7 +17,7 @@ cp sample_env .env
 3. Fill in at least:
 - `AZURE_VOICELIVE_ENDPOINT`
 - `AZURE_VOICELIVE_PROJECT_NAME`
-- `AZURE_VOICELIVE_AGENT_ID`
+- `AZURE_VOICELIVE_AGENT_ID` (format: `agentName:version`, e.g. `agentFeborder:8`)
 - `AZURE_VOICELIVE_VOICE`
 
 Auth options:

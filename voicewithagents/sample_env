@@ -1,5 +1,6 @@
 AZURE_VOICELIVE_ENDPOINT="https://<your-resource>.services.ai.azure.com/"
 AZURE_VOICELIVE_PROJECT_NAME="<your-project-name>"
+# Agent id format for VoiceLive: <agentName>:<version> (example: agentFeborder:8)
 AZURE_VOICELIVE_AGENT_ID="<your-agent-id>"
 AZURE_VOICELIVE_API_KEY="<optional-api-key>"
 AZURE_VOICELIVE_API_VERSION="2025-10-01"

@@ -512,9 +512,12 @@ def verify_agent_access(project_endpoint: str, agent_id: str) -> None:
         print("Missing AZURE_EXISTING_AIPROJECT_ENDPOINT or AZURE_EXISTING_AGENT_ID for verification.")
         return
 
-    agent_name = agent_id.split(":")[0]
+    agent_name, _, agent_version = agent_id.partition(":")
     project_client = AIProjectClient(endpoint=project_endpoint, credential=SyncDefaultAzureCredential())
-    agent = project_client.agents.get(agent_name=agent_name)
+    if agent_version:
+        agent = project_client.agents.get_version(agent_name=agent_name, version=agent_version)
+    else:
+        agent = project_client.agents.get(agent_name=agent_name)
     print(f"Retrieved agent: {agent.name}")
 
     openai_client = project_client.get_openai_client()
