@@ -1,3 +1,10 @@
+# agentic behavious
+
+instructions_agent.md 
+credentials.md
+examplecode.md
+agentcode.md
+functionscalling.md
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

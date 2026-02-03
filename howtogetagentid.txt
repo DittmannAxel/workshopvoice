@@ -1,0 +1,5 @@
+AGENT_TOKEN=$(az account get-access-token --resource "https://ai.azure.com" --query accessToken -o tsv)
+
+curl --request GET \
+  --url "https://adminfeb02-resource.services.ai.azure.com/api/projects/adminfeb02/assistants?api-version=v1" \
+  --header "Authorization: Bearer $AGENT_TOKEN"
