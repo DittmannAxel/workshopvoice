@@ -4,7 +4,7 @@ This repo contains small experiments and samples around Azure VoiceLive and Foun
 
 ## VoiceLive + Existing Foundry Agent
 
-See `voicewithagents/README.md` for a minimal Python script that connects to Azure VoiceLive and uses an **existing** agent stored in AI Foundry (no agent creation).
+See [voicewithagents/README.md](voicewithagents/README.md) for a minimal Python script that connects to Azure VoiceLive and uses an **existing** agent stored in AI Foundry (no agent creation).
 
 - Code: `voicewithagents/voice_live_agent.py`
 - Config: `voicewithagents/sample_env` (copy to `.env` and fill values)
