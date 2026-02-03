@@ -14,7 +14,3 @@ AZURE_EXISTING_RESOURCE_ID="/subscriptions/<sub>/resourceGroups/<rg>/providers/M
 AZURE_EXISTING_AGENT_ID="<your-agent-id>"
 
 AZD_ALLOW_NON_EMPTY_FOLDER=true
-
-DEMO_CUSTOMER_NUMBER="CUST-1001"
-DEMO_ORDER_NUMBER="ORD-9001"
-DEMO_ORDER_STATUS="Shipped and arriving Feb 7, 2026."
