@@ -1,14 +1,12 @@
 AGENT_TOKEN=$(az account get-access-token --resource "https://ai.azure.com" --query accessToken -o tsv)
 
-# List agents (new API): returns agent objects and supports versioned agents.
+# Option A (classic assistants): returns OpenAI-style assistant IDs like `asst_...`
+curl --request GET \
+  --url "https://adminfeb02-resource.services.ai.azure.com/api/projects/adminfeb02/assistants?api-version=v1" \
+  --header "Authorization: Bearer $AGENT_TOKEN"
+
+# Option B (versioned Foundry agents): returns agents with name/version.
+# Some VoiceLive setups expect `agentName:version` (example: `agentFeborder:8`).
 curl --request GET \
   --url "https://adminfeb02-resource.services.ai.azure.com/api/projects/adminfeb02/agents?api-version=2025-11-15-preview" \
   --header "Authorization: Bearer $AGENT_TOKEN"
-
-# List versions for a specific agent name:
-curl --request GET \
-  --url "https://adminfeb02-resource.services.ai.azure.com/api/projects/adminfeb02/agents/agentFeborder/versions?api-version=2025-11-15-preview" \
-  --header "Authorization: Bearer $AGENT_TOKEN"
-
-# VoiceLive expects the agent id as: <agentName>:<version>
-# Example: agentFeborder:8
